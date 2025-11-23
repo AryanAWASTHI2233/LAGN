@@ -1,0 +1,57 @@
+####CODE#####
+# JAUNDICE HEALTH INSPECTION
+#JAUNDICE INSPECTION TOOL
+###[[JAUNDICE HEALTH INSPECTION]]###
+import matplotlib.pyplot as plt
+def user_name():
+     name = input('ENTER NAME:')
+     return 'hello ' + name
+def get_symptoms():
+     symptoms = [
+         "Yellowing of eyes/skin",
+         "Fever",
+         "Vomiting",
+         "Loss of appetite",
+         "Dark urine",
+         "Pale stool",
+         "Itching",
+         "Stomach pain",
+         "chills",
+         "weight loss"
+     ]
+     score = 0
+     selected = []
+     print("Please answer with y/n:\n")
+     for symptom in symptoms:
+         ans = input("Experiencing " + symptom + "? (y/n): ")
+         if ans.lower() == "y":
+          score+=1
+          selected.append(symptom)
+     if score==0:
+         status="GOOD, YOU ARE FINE"
+     elif score<=3:
+         status="TAKE REST"
+     elif score==5:
+         status="AVOID SOCIAL CONTACT, TAKE REST, SEE A DOCTOR"
+     elif score>5:
+         status="VISIT A DOCTOR QUICKLY"
+     else:
+         status="select a number please"
+     return score, status
+def show_pie_chart(score, total_symptoms=10):
+    danger_pct = (score / total_symptoms) * 100
+    safe_pct = 100 - danger_pct
+    labels = ["In Danger", "Safe"]
+    sizes = [danger_pct, safe_pct]
+    colors = ["red", "green"] 
+    plt.figure(figsize=(6, 6))
+    plt.pie(sizes, labels=labels, colors=colors, autopct="%1.1f%%", startangle=90)
+    plt.title("JAUNDICE HEALTH INSPECTION (Danger vs Safe)")
+    plt.tight_layout()
+    plt.show()
+print(user_name())
+score, status=get_symptoms()
+print('\nStatus:, status')
+print('Score:', score)
+show_pie_chart(score)
+########################################################################
