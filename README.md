@@ -6,6 +6,7 @@ Health Symptom Analyzer with Risk Pie Chart
 ---
 
 **Overview of the Project**
+
 The Health Symptom Analyzer is a Python-based interactive program that evaluates a user’s health risk level based on common symptoms. The user answers a series of yes/no questions, and the system calculates a score to determine their risk category. It also generates a visual pie chart using Matplotlib to show the percentage of “Safe” and “In Danger” conditions. This project demonstrates user input handling, decision-making logic, and data visualization in Python.
 
 
@@ -32,6 +33,7 @@ Beginner-friendly and easy to run
 ---
 
 **Technologies / Tools Used**
+
 Python 3.x
 
 Matplotlib (for pie chart visualization)
@@ -43,6 +45,7 @@ Standard Python libraries: input(), conditionals, lists, loops
 ---
 
 **Steps to Install & Run the Project**
+
 1. Install Python (if not installed)
 
 Download from: https://www.python.org/downloads/
@@ -78,6 +81,7 @@ View your health status and pie chart
 ---
 
 **Instructions for Testing**
+
 Test the program by entering different combinations of symptoms:
 
 0 symptoms → expect “GOOD, YOU ARE FINE”
