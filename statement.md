@@ -1,101 +1,120 @@
-✔ Problem Statement
+✅ Problem Statement
 
-Jaundice is a condition that often goes unnoticed in its early stages due to lack of awareness and confusion about symptoms. Many individuals are unable to identify whether the symptoms they experience are serious enough to require medical attention. There is a need for a simple, accessible tool that can quickly analyze user-reported symptoms and provide an initial risk estimation.
-
-This project aims to offer a lightweight, interactive system that helps users determine their potential jaundice risk based on common symptoms, without requiring medical expertise or complex devices.
+Many people struggle to understand whether the symptoms they experience indicate jaundice or a related health issue. They often ignore early signs due to lack of awareness. There is a need for a simple, interactive Python-based system that asks users about common jaundice symptoms, evaluates their responses, calculates a risk score, and provides a meaningful health status. The problem is to design a program that guides users in a basic risk assessment using symptom analysis and visual representation.
 
 
 ---
 
-✔ Scope of the Project
+✅ Scope of the Project
 
-The project provides a command-line interface (CLI) tool for assessing jaundice risk.
+The project focuses on creating a console-based jaundice risk assessment tool using Python.
+Its scope includes:
 
-It focuses on collecting basic symptoms through simple yes/no inputs.
+Collecting user input (name and symptom responses).
 
-The system calculates risk levels based on the number of symptoms selected.
+Checking 10 key symptoms related to jaundice.
 
-It stores results in a text file report for record-keeping.
+Scoring the user’s condition based on their answers.
 
-It provides a visual representation of the risk through a pie chart.
+Categorizing the risk level (Good, Mild, Moderate, High, Critical).
 
-It does not diagnose jaundice medically—its goal is preliminary assessment only.
+Saving the full report in a text file (report.txt).
 
-It is a small-scale, educational project demonstrating Python fundamentals like:
+Visualizing the health status through a pie chart.
 
-Input handling
-
-Conditional checks
-
-File operations
-
-Object-oriented programming
-
-Basic data visualization
+Ensuring ease of use through input validation and modular programming.
 
 
+The system does not diagnose diseases, but provides a basic preliminary assessment based on symptom count.
 
 
 ---
 
-✔ Target Users
+✅ Target Users
 
-General users who want to self-check symptoms quickly.
+The target users for this project include:
 
-Students and beginners learning Python and building simple projects.
+General individuals who want to quickly check if their symptoms may indicate jaundice.
 
-Individuals monitoring health symptoms for early detection.
+Students or beginners in Python, for learning logic-building, file handling, and visualization.
 
-Healthcare learners who want to understand symptom-based assessment tools.
+Basic healthcare awareness programs needing simple assessment tools.
 
-Users without technical knowledge, since the system requires only simple y/n inputs.
+Anyone looking for a preliminary self-check before deciding whether to visit a doctor.
 
 
 
 ---
 
-✔ High-Level Features
+✅ High-Level Features
 
-1️⃣ Symptom-Based Assessment
+These features summarize what your implemented code can do:
 
-Users answer a series of jaundice-related symptoms.
+🔹 1. User Information Input
 
-Each "yes" increases the risk score.
+The program asks the user to enter their name and greets them personally.
 
+🔹 2. Symptom-Based Questions
 
-2️⃣ Risk Level Classification
+It displays 10 jaundice-related symptoms and takes y/n responses with validation.
 
-Categorizes the risk into five stages:
+🔹 3. Risk Scoring Logic
 
-Fine
+Each "yes" increases the score. Final score determines the risk level using predefined categories.
 
-Mild
+🔹 4. Risk Level Determination
 
-Moderate
+The program maps the score to one of the following:
 
-High
+Good (0)
 
-Critical
+Mild (1–2)
 
+Moderate (3–4)
 
+High (5–6)
 
-3️⃣ Automatic Report Generation
-
-Saves user name, symptoms, score, and result into report.txt.
-
-
-4️⃣ Visual Health Analysis (Pie Chart)
-
-Uses matplotlib to display “Safe Zone vs Danger Zone” analysis.
+Critical (7+)
 
 
-5️⃣ Interactive CLI Input System
+🔹 5. Report Generation (File Handling)
 
-Simple yes/no questions
+Saves the user’s:
 
-Validates incorrect user inputs
+Name
 
-Provides clean console output
+Selected symptoms
+
+Score
+
+Risk category
+into report.txt.
+
+
+🔹 6. Visual Pie Chart
+
+Displays a Matplotlib pie chart showing:
+
+% Danger (selected symptoms)
+
+% Safe (remaining symptoms)
+
+
+🔹 7. Modular Class-Based Design
+
+Entire logic organized inside a JaundiceDetector class with separate methods:
+
+get_user_name()
+
+collect_symptoms()
+
+calculate_risk()
+
+save_report()
+
+show_pie_chart()
+
+run()
 
 
 6️⃣ Modular, OOP-Based Architecture
